@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bpk_sky_blue"
+    tools:context=".MainActivity">
+
+    <!-- Flight Info Card -->
+    <net.skyscanner.backpack.card.BpkCardView
+        android:id="@+id/flightCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/bpk_surface"
+        app:cornerStyle="large"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/bpkSpacingLg">
+
+            <net.skyscanner.backpack.text.BpkText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flight: SK123"
+                style="@style/bpkTextHero4" />
+
+            <net.skyscanner.backpack.text.BpkText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DEL → BOM"
+                style="@style/bpkTextHeading4"
+                android:layout_marginTop="@dimen/bpkSpacingSm" />
+        </LinearLayout>
+    </net.skyscanner.backpack.card.BpkCardView>
+
+    <!-- Departure Info Card -->
+    <net.skyscanner.backpack.card.BpkCardView
+        android:id="@+id/departureCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/bpk_surface"
+        app:cornerStyle="large"
+        app:layout_constraintTop_toBottomOf="@id/flightCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/arrivalCard">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/bpkSpacingLg">
+
+            <net.skyscanner.backpack.text.BpkText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Departure"
+                style="@style/bpkTextHeading1"
+                android:layout_marginBottom="@dimen/bpkSpacingSm"/>
+
+            <net.skyscanner.backpack.text.BpkText
+                android:id="@+id/departureCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DEL"
+                style="@style/bpkTextHero1" />
+
+            <net.skyscanner.backpack.text.BpkText
+                android:id="@+id/departureTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10:30 AM"
+                style="@style/bpkTextCaption"
+                android:layout_marginTop="@dimen/bpkSpacingSm" />
+        </LinearLayout>
+    </net.skyscanner.backpack.card.BpkCardView>
+
+    <!-- Arrival Info Card -->
+    <net.skyscanner.backpack.card.BpkCardView
+        android:id="@+id/arrivalCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/bpk_surface"
+        app:cornerStyle="large"
+        app:layout_constraintTop_toBottomOf="@id/flightCard"
+        app:layout_constraintStart_toEndOf="@id/departureCard"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/bpkSpacingLg">
+
+            <net.skyscanner.backpack.text.BpkText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Arrival"
+                style="@style/bpkTextHeading1"
+                android:layout_marginBottom="@dimen/bpkSpacingSm"/>
+
+            <net.skyscanner.backpack.text.BpkText
+                android:id="@+id/arrivalCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BOM"
+                style="@style/bpkTextHero1" />
+
+            <net.skyscanner.backpack.text.BpkText
+                android:id="@+id/arrivalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1:15 PM"
+                style="@style/bpkTextCaption"
+                android:layout_marginTop="@dimen/bpkSpacingSm" />
+        </LinearLayout>
+    </net.skyscanner.backpack.card.BpkCardView>
+
+    <!-- Book Now Button -->
+    <net.skyscanner.backpack.button.BpkButton
+        android:id="@+id/bookButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book Now"
+        app:layout_constraintTop_toBottomOf="@id/arrivalCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

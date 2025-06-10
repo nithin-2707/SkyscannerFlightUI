@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Backpack Base Theme -->
+    <style name="Theme.SkyscannerFlightUI" parent="BpkTheme">
+        <!-- Skyscanner Colors -->
+        <item name="colorPrimary">#0071CE</item> <!-- Skyscanner Blue -->
+        <item name="colorPrimaryDark">#005BA3</item>
+        <item name="colorAccent">#00C7B1</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:textColorPrimary">#212121</item>
+        <item name="android:textColorSecondary">#757575</item>
+    </style>
+</resources>
